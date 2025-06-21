@@ -1,0 +1,13 @@
+b=[3,4,677,88,96,5,6,7,8,9,0]
+b.sort()
+print( b)
+b.reverse()
+print(b)
+b.insert(5,1000)
+print(b)
+b.remove(88)
+print(b)
+b.pop(2)
+print(b)
+b.append(1000)
+print(b)
