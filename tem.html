@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Voting Eligibility Checker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f2f2f2;
+        }
+        .container {
+            background-color: rgb(98, 86, 233);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 400px;
+            margin: auto;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        input, button {
+            padding: 10px;
+            margin-top: 10px;
+            width: 80%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Voting Eligibility Checker</h2>
+    <form method="POST">
+        <input type="number" name="age" placeholder="Enter your age" required>
+        <br>
+        <button type="submit">Check</button>
+    </form>
+    <p style="color:green;">{{ result }}</p>
+</div>
+
+</body>
+</html>
