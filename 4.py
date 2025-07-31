@@ -1,24 +1,20 @@
-print('''Twinkle, twinkle, little star,
-How I wonder what you are!
-Up above the world so high,
-Like a diamond in the sky.
+from collections import OrderedDict
 
-When the blazing sun is gone,
-When he nothing shines upon,
-Then you show your little light,
-Twinkle, twinkle, all the night.
+od = OrderedDict()
+od['apple'] = 1
+od['banana'] = 2
+od['cherry'] = 3
 
-Then the trav'ller in the dark,
-Thanks you for your tiny spark,
-He could not see which way to go,
-If you did not twinkle so.
+print(list(od.items()))
 
-In the dark blue sky you keep,
-And often thro' my curtains peep,
-For you never shut your eye,
-Till the sun is in the sky.
 
-'Tis your bright and tiny spark,
-Lights the trav'ller in the dark:
-Tho' I know not what you are,
-Twinkle, twinkle, little star.''')
+from collections import OrderedDict
+
+d = {'a': 1, 'b': 2, 'c': 3}
+for k, v in d.items():
+    print(k, v)
+
+print("OrderedDict:")
+od = OrderedDict([('d', 4), ('b', 2), ('a', 1), ('c', 3)])
+for k, v in od.items():
+    print(k, v)
