@@ -1,4 +1,11 @@
-import  pyttsx3
-engine = pyttsx3.init()
-engine.say("I will speak this text mahadev says")
-engine.runAndWait()
+from collections import defaultdict
+
+d = defaultdict(list)
+
+d['fruits'].append('apple')
+d['vegetables'].append('carrot')
+d['fruits'].append('banana')
+d['juices'].append('orange juice')
+print(d)
+
+print(d['juices'])
