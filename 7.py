@@ -1,9 +1,16 @@
-from collections import defaultdict
+class Person:
+    def __init__(self):
+        self.__name = "Geeks"  # private attribute
+        self.__age = 10        # private attribute
 
-d = defaultdict(list)
+    def get_name(self):
+        return self.__name
 
-for i in range(5):
-    d[i].append(i)
-    
-print("Dictionary with values as list:")
-print(d)
+    def get_age(self):
+        return self.__age
+
+    def set_name(self, name):
+        self.__name = name
+
+    def set_age(self, age):
+        self.__age = age

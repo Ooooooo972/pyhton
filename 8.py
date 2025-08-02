@@ -1,23 +1,28 @@
-def insert_dict(query, dict):
-    dict[query[1]] = int(query[2])
+class Employee:
+    def __init__(self, id, salary):
+        self.id = id
+        self.salary = salary
 
-# deleting from dictionary
-def del_dict(query, dict):
-    if query[1] in dict:
-        del dict[query[1]]
-        return True
-    return False
-    
-    
+    def get_info(self):
+        return f"EmployeeID:{self.id} Salary:{self.salary}"
 
-# print marks of required name
-def print_dict(key, dict):
-    flag = False
-    if(key in dict):
-        flag = True
-        print ("Marks of " + key + " is "+ str(dict[key]))
-        
-    return True if flag is True else False
+class SalesEmployee(Employee):
+    def __init__(self, id, salary, sales=0):
+        super().__init__(id, salary)
+        self.sales = sales
 
+    def get_info(self):
+        return f"EmployeeID:{self.id} Salary:{self.salary} Sales:{self.sales}"
+class ComplexNumber:
+    def __init__(self, real, imaginary):
+        self.real = real
+        self.imaginary = imaginary
 
+    def __add__(self, other):
+        # Add real parts and imaginary parts
+        new_real = self.real + other.real
+        new_imaginary = self.imaginary + other.imaginary
+        return ComplexNumber(new_real, new_imaginary)
 
+    def __str__(self):
+        return f"{self.real} + {self.imaginary}i"

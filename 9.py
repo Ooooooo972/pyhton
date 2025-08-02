@@ -1,16 +1,21 @@
-class Solution:
-    def longestSubarray(self, arr, k):  
-        # code here
-        p_sum = 0
-        max_l = 0
-        sum_i = {}
-        for i in range(len(arr)):
-            p_sum += arr[i]
-            if p_sum == k:
-                max_l = i + 1
-            if (p_sum - k) in sum_i:
-                length = i - sum_i[p_sum - k]
-                max_l = max(max_l, length)
-            if p_sum not in sum_i:
-                sum_i[p_sum] = i
-        return max_l
+from abc import ABC, abstractmethod
+
+class Shape(ABC):
+    def __init__(self, c):
+        self.color = c
+
+    def get_color(self):
+        return self.color
+
+    @abstractmethod
+    def get_area(self) -> float:
+        pass
+
+
+class Square(Shape):
+    def __init__(self, c, side):
+        super().__init__(c)
+        self.side = side
+
+    def get_area(self) -> float:
+        return self.side * self.side
