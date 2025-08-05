@@ -1,2 +1,5 @@
-name=input("enter your name :")
-print(f"good afternoon {name}")
+from tkinter import *
+root = Tk()
+w = Label(root, text='GeeksForGeeks.org!')
+w.pack()
+root.mainloop()
